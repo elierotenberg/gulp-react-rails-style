@@ -1,6 +1,6 @@
 {
   "name": "gulp-react-rails-style",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Gulp plugin to process React on Rails compiled components to one or multiple CSS stylesheets.",
   "main": "index.js",
   "scripts": {
@@ -25,7 +25,7 @@
   "dependencies": {
     "gulp-util": "^3.0.1",
     "lodash": "^2.4.1",
-    "react-rails": "^0.1.5",
+    "react-rails": "^0.1.6",
     "through2": "^0.6.2"
   },
   "devDependencies": {

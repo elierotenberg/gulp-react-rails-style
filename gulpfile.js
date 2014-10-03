@@ -1,5 +1,6 @@
 var gulp = require("gulp");
-var style = require("./");
+var R = require("react-rails");
+var style = require("./")([R.Style.Processors.autoprefixer, R.Style.Processors.min]);
 
 gulp.task("default", function() {
     return gulp.src(["tests/**/*.js"])

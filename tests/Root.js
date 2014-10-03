@@ -16,6 +16,7 @@ var Root = React.createClass(/** @lends Root.prototype */{displayName: 'Root',
                         width: 980,
                         marginLeft: "auto",
                         marginRight: "auto",
+                        transform: "rotate(90deg)",
                     },
                 },
             };
