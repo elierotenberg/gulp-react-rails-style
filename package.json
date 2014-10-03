@@ -1,0 +1,34 @@
+{
+  "name": "gulp-react-rails-style",
+  "version": "0.0.1",
+  "description": "Gulp plugin to process React on Rails compiled components to one or multiple CSS stylesheets.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:elierotenberg/gulp-react-rails-style.git"
+  },
+  "keywords": [
+    "react",
+    "react-rails",
+    "gulpplugin",
+    "css"
+  ],
+  "author": "Elie Rotenberg <elie@rotenberg.io>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/elierotenberg/gulp-react-rails-style/issues"
+  },
+  "homepage": "https://github.com/elierotenberg/gulp-react-rails-style",
+  "dependencies": {
+    "gulp-util": "^3.0.1",
+    "lodash": "^2.4.1",
+    "react-rails": "^0.1.5",
+    "through2": "^0.6.2"
+  },
+  "devDependencies": {
+    "gulp": "^3.8.8"
+  }
+}
