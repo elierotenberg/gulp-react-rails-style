@@ -25,6 +25,12 @@ module.exports = function(R, processors) {
                 return;
             }
             try {
+                // To allow for gulp.watch to work with this task,
+                // delete the cache if it exists, to cleanly reload
+                // the module.
+                if(require.cache[require.resolve(file.path)]) {
+                    delete require.cache[require.resolve(file.path)];
+                }
                 components.push(require(file.path));
             }
             catch(err) {
