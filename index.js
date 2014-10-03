@@ -3,11 +3,10 @@ var gutil = require("gulp-util");
 var PluginError = gutil.PluginError;
 var File = gutil.File;
 var _ = require("lodash");
-var R = require("react-rails");
 
 var PLUGIN_NAME = "gulp-react-rails-style";
 
-module.exports = function(processors) {
+module.exports = function(R, processors) {
     processors = processors || [];
     _.each(processors, function(process) {
         R.Style.registerCSSProcessor(process);

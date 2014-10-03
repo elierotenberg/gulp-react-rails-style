@@ -8,7 +8,8 @@ Usage
 
 ```js
 var gulp = require("gulp");
-var style = require("gulp-react-rails-style")([R.Style.Processors.autoprefixer, R.Style.Processors.min]);
+var R = require("react-rails");
+var style = require("gulp-react-rails-style")(R, [R.Style.Processors.autoprefixer, R.Style.Processors.min]);
 
 gulp.task("style", function() {
     return gulp.src(["tests/**/*.js"])
