@@ -11,9 +11,20 @@ module.exports = function(R, processors) {
     _.each(processors, function(process) {
         R.Style.registerCSSProcessor(process);
     });
-    return function() {
+    return function(cachebust) {
         var stylesheets = {};
         var components = [];
+
+        cachebust = cachebust || [];
+        if(!_.isArray(cachebust)) {
+            cachebust = [cachebust];
+        }
+        _.each(cachebust, function(module) {
+            var r = require.resolve(module);
+            if(require.cache[r]) {
+                delete require.cache[r];
+            }
+        });
 
         var bufferComponent = function bufferComponent(file, enc, cb) {
             if(file.isNull()) {

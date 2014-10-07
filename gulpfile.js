@@ -4,6 +4,6 @@ var style = require("./")(R, [R.Style.Processors.autoprefixer, R.Style.Processor
 
 gulp.task("default", function() {
     return gulp.src(["tests/**/*.js"])
-    .pipe(style())
+    .pipe(style("./tests/styles"))
     .pipe(gulp.dest("tests/"));
 });
